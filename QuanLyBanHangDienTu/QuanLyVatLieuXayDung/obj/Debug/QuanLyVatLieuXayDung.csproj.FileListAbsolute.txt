@@ -727,7 +727,6 @@ D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLi
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.GUI.cnNhanVien.resources
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.GUI.DuyetDonHang.resources
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.GUI.KhachHangc.resources
-D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.GUI.Kho.resources
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.GUI.LuongNV.resources
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.GUI.NhaCungCap1.resources
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.GUI.Phieuchi.resources
@@ -748,7 +747,6 @@ D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLi
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.exe.config
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.exe
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.pdb
-D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DALL_BALL.dll
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DevExpress.BonusSkins.v19.1.dll
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DevExpress.Charts.v19.1.Core.dll
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DevExpress.CodeParser.v19.1.dll
@@ -791,7 +789,6 @@ D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLi
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\stdole.dll
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DevExpress.XtraDiagram.v19.1.dll
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DevExpress.Diagram.v19.1.Core.dll
-D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DALL_BALL.pdb
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DALL_BALL.dll.config
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DevExpress.Data.v19.1.xml
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DevExpress.DataAccess.v19.1.xml
@@ -958,3 +955,6 @@ D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLi
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.Report.test.resources
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.csprojAssemblyReference.cache
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.GUI.TaoHoaDonNhap2.resources
+D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.GUI.Kho1.resources
+D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DALL_BALL.dll
+D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\QuanLyVatLieuXayDung\bin\Debug\DALL_BALL.pdb

@@ -18,9 +18,9 @@ namespace DALL_BALL
             return dsncc;
         }
 
-        public IQueryable loadataHoaDonXuat()
+        public IQueryable loadataHoaDonXuat(string manv)
         {
-            var ds = from HoaDon_Xuats in db.HoaDon_Xuats
+            var ds = from HoaDon_Xuats in db.HoaDon_Xuats.Where(t=>t.MANV==manv)
                      select new
                      {
                          HoaDon_Xuats.MAHD_Xuat,
@@ -68,19 +68,25 @@ namespace DALL_BALL
         public string getmaHoadonxuat()
         {
 
-            string x = db.HoaDon_Xuats.Max(m => m.MAHD_Xuat);
-            int ma = int.Parse(x.Substring(x.Length - 3, 3));
 
-            if (ma >= 0 && ma < 9)
+
+            using (QLBanHangDataContext data = new QLBanHangDataContext())
             {
-                return "HDX00" + (ma + 1).ToString();
+                string x = data.HoaDon_Xuats.Max(m => m.MAHD_Xuat);
+                int ma = int.Parse(x.Substring(x.Length - 3, 3));
+
+                if (ma >= 0 && ma < 9)
+                {
+                    return "HDX00" + (ma + 1).ToString();
+                }
+                else if (ma >= 9)
+                {
+                    return "HDX0" + (ma + 1).ToString();
+                }
+                else
+                    return "";
             }
-            else if (ma >= 9)
-            {
-                return "HDX0" + (ma + 1).ToString();
-            }
-            else
-                return "";
+           
 
 
         }
@@ -228,27 +234,31 @@ namespace DALL_BALL
             }
           
         }
-        public void sua1chitiethoadonxuat(string mahh,int soluongxuat,long thanhtienxuat,float vat,double dongiaxuat,string donvi)
+        public void sua1chitiethoadonxuat(string mahdxuat,string mahh,int soluongxuat,long thanhtienxuat, double dongiaxuat)
         {
 
 
 
-            using (QLBanHangDataContext data = new QLBanHangDataContext())
+            using (QLBanHangDataContext db = new QLBanHangDataContext())
             {
-                ChiTietHD_Xuat cthdx = new ChiTietHD_Xuat();
-                cthdx = db.ChiTietHD_Xuats.Where(t => t.MAHH == mahh).FirstOrDefault();
+                            var queryChiTietHD_Xuats =
+                   from ChiTietHD_Xuats in db.ChiTietHD_Xuats
+                   where
+                     ChiTietHD_Xuats.MAHD_Xuat ==mahdxuat &&
+                     ChiTietHD_Xuats.MAHH == mahh
+                   select ChiTietHD_Xuats;
+                            foreach (var ChiTietHD_Xuats in queryChiTietHD_Xuats)
+                            {
+                                ChiTietHD_Xuats.SoLuong_Xuat =soluongxuat;
+                                ChiTietHD_Xuats.DonGia_Xuat =dongiaxuat;
+                            }
+                            db.SubmitChanges();
 
-                cthdx.SoLuong_Xuat = soluongxuat;
-                cthdx.ThanhTienXuat = thanhtienxuat;
-                cthdx.DonGia_Xuat = dongiaxuat;
-                cthdx.DonVi = donvi;
-
-                data.SubmitChanges();
             }
-           
-          
-            
-          
+
+
+
+
         }
         public void xoa1chitethoadonall(string mahd)
         {

@@ -32,6 +32,8 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDangnhap = new DevExpress.XtraEditors.SimpleButton();
             this.checkhienthi = new DevExpress.XtraEditors.CheckEdit();
             this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -41,8 +43,6 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDangnhap = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -94,6 +94,32 @@
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "Thông Tin Đăng Nhập";
             this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
+            // 
+            // btnHuyBo
+            // 
+            this.btnHuyBo.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyBo.Appearance.Options.UseFont = true;
+            this.btnHuyBo.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.close_32x32;
+            this.btnHuyBo.Location = new System.Drawing.Point(648, 314);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(120, 42);
+            this.btnHuyBo.TabIndex = 5;
+            this.btnHuyBo.Text = "Hủy Bỏ";
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
+            // 
+            // btnDangnhap
+            // 
+            this.btnDangnhap.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangnhap.Appearance.Options.UseFont = true;
+            this.btnDangnhap.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.login;
+            this.btnDangnhap.Location = new System.Drawing.Point(462, 314);
+            this.btnDangnhap.Name = "btnDangnhap";
+            this.btnDangnhap.Size = new System.Drawing.Size(148, 42);
+            this.btnDangnhap.TabIndex = 5;
+            this.btnDangnhap.Text = "Đăng Nhập";
+            this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
+            this.btnDangnhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnDangnhap_KeyDown);
+            this.btnDangnhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnDangnhap_KeyPress);
             // 
             // checkhienthi
             // 
@@ -183,40 +209,19 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // btnHuyBo
-            // 
-            this.btnHuyBo.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuyBo.Appearance.Options.UseFont = true;
-            this.btnHuyBo.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.close_32x32;
-            this.btnHuyBo.Location = new System.Drawing.Point(648, 314);
-            this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(120, 42);
-            this.btnHuyBo.TabIndex = 5;
-            this.btnHuyBo.Text = "Hủy Bỏ";
-            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
-            // 
-            // btnDangnhap
-            // 
-            this.btnDangnhap.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangnhap.Appearance.Options.UseFont = true;
-            this.btnDangnhap.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.login;
-            this.btnDangnhap.Location = new System.Drawing.Point(462, 314);
-            this.btnDangnhap.Name = "btnDangnhap";
-            this.btnDangnhap.Size = new System.Drawing.Size(148, 42);
-            this.btnDangnhap.TabIndex = 5;
-            this.btnDangnhap.Text = "Đăng Nhập";
-            this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 559);
             this.Controls.Add(this.layoutControl1);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

@@ -166,9 +166,9 @@ D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\bin
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
-D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\obj\Debug\ThuVien.csprojAssemblyReference.cache
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\obj\Debug\ThuVien.dll.licenses
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\obj\Debug\ThuVien.csproj.CoreCompileInputs.cache
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\obj\Debug\ThuVien.csproj.CopyComplete
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\obj\Debug\ThuVien.dll
 D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\obj\Debug\ThuVien.pdb
+D:\Lap Trinh HuFi\doanundungthongminh\New folder\QuanLyBanHangDienTu\ThuVien\obj\Debug\ThuVien.csprojAssemblyReference.cache

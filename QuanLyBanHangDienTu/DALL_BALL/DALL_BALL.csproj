@@ -66,6 +66,7 @@
     <Compile Include="DALL_BALL_Phieuthu.cs" />
     <Compile Include="DALL_BALL_Thongke.cs" />
     <Compile Include="DALL_QuantriNguoiDung.cs" />
+    <Compile Include="DTO\HangHoaDT0.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\TienNhaCungCapDTO.cs" />
     <Compile Include="HangHoatamcs.cs" />

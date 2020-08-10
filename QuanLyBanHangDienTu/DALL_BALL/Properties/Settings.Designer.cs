@@ -26,11 +26,11 @@ namespace DALL_BALL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=QuanLyBanhangdientu;User ID=sa;Password=Nha" +
-            "n09575789@")]
-        public string QuanLyBanhangdientuConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-023KV5Q\\MSSQLSEVER;Initial Catalog=QuanLyBanhangdientu2;User " +
+            "ID=sa;Password=Nhan09575789@")]
+        public string QuanLyBanhangdientu2ConnectionString {
             get {
-                return ((string)(this["QuanLyBanhangdientuConnectionString"]));
+                return ((string)(this["QuanLyBanhangdientu2ConnectionString"]));
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace QuanLyVatLieuXayDung.GUI
 {
-    partial class Kho
+    partial class Kho1
     {
         /// <summary> 
         /// Required designer variable.

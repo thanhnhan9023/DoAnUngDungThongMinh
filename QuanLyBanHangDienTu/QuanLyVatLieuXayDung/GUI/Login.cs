@@ -20,6 +20,8 @@ namespace QuanLyVatLieuXayDung.GUI
         public string macv;
         public static string manv = "";
         public static string tennv = "";
+        
+           
       
         public static string tendangnhap;
         public Login()
@@ -61,8 +63,9 @@ namespace QuanLyVatLieuXayDung.GUI
 
                 manv = nd[0].MaNV;
                 tennv = nd[0].NhanVien.TenNV;
+                macv = nd[0].NhanVien.MaCV;
                 this.Hide();
-                s s = new s();
+                s s = new s(macv);
                 s.Show();
               
           
@@ -89,6 +92,7 @@ namespace QuanLyVatLieuXayDung.GUI
         private void Login_Load(object sender, EventArgs e)
         {
             txtMatKhau.Properties.UseSystemPasswordChar = true;
+
         }
 
         private void checkhienthi_CheckedChanged(object sender, EventArgs e)
@@ -114,6 +118,59 @@ namespace QuanLyVatLieuXayDung.GUI
         {
             txtDangNhap.Text = "";
             txtMatKhau.Text = "";
+        }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+            {
+
+                if (txtMatKhau.Text.Length <= 0)
+                {
+                    XtraMessageBox.Show("Bạn chưa nhập mật khẩu");
+                    return;
+                }
+                if (txtDangNhap.Text.Length <= 0)
+                {
+                    XtraMessageBox.Show("Bạn chưa nhập tên đăng nhập");
+                }
+
+                List<NguoiDung> nd = new List<NguoiDung>();
+                nd = logintt.login(txtDangNhap.Text, logintt.SHA256(txtMatKhau.Text));
+                if (nd.Count > 0)
+                {
+
+
+                    macv = nd[0].NhanVien.MaCV;
+
+                    manv = nd[0].MaNV;
+                    tennv = nd[0].NhanVien.TenNV;
+                    this.Hide();
+                    s s = new s(macv);
+                    s.Show();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Bạn nhập sai mật khẩu hoặc tài khoản");
+                    return;
+                }
+            }
+
+        }
+
+        private void btnDangnhap_KeyDown(object sender, KeyEventArgs e)
+        {
+          
+        }
+
+        private void btnDangnhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+           
         }
     }
 }

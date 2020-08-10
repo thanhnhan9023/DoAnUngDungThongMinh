@@ -55,6 +55,7 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dsLoaihang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -234,6 +235,7 @@
             // 
             // panelControl4
             // 
+            this.panelControl4.Controls.Add(this.simpleButton1);
             this.panelControl4.Controls.Add(this.txtDiaChi);
             this.panelControl4.Controls.Add(this.pictureEdit1);
             this.panelControl4.Controls.Add(this.btnHuy);
@@ -365,6 +367,18 @@
             this.labelControl1.Text = "Mã Loại Hàng";
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(432, 291);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(117, 41);
+            this.simpleButton1.TabIndex = 7;
+            this.simpleButton1.Text = "In ";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // ThongTinLoaiHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -427,5 +441,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

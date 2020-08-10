@@ -1,8 +1,10 @@
 ﻿using DALL_BALL;
+using DALL_BALL.DTO;
 using DevExpress.XtraEditors;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
-
+using Excel = Microsoft.Office.Interop.Excel;
 namespace QuanLyVatLieuXayDung.GUI
 {
 
@@ -414,6 +416,83 @@ namespace QuanLyVatLieuXayDung.GUI
         private void btnHuyBo_Click_2(object sender, EventArgs e)
         {
             ThongTinHangHoa_Load(sender, e);
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Excel.Application application = new Excel.Application();
+            Excel.Workbook workbook;
+            Excel.Worksheet worksheet;
+
+
+
+
+
+            workbook = application.Workbooks.Add(Type.Missing);
+            application.Visible = true;
+            application.WindowState = Excel.XlWindowState.xlMaximized;
+            //getdatabase   
+            workbook.Worksheets.Add();
+            worksheet = workbook.Sheets[1];
+
+
+            worksheet.Cells[1, 1] = "Thông Tin Hàng Hóa";
+            worksheet.Cells[3, 1] = "STT";
+            worksheet.Cells[3, 2] = "Mã Hàng Hóa";
+            worksheet.Cells[3, 3] = "Tên Hàng Hóa";
+            worksheet.Cells[3, 4] = "Đơn Vị Tính";
+            worksheet.Cells[3, 5] = "Link Hình ảnh";
+            worksheet.Cells[3, 6] = "Giá Bán Lẻ";
+            worksheet.Cells[3, 7] = "Giá Bán Sỉ";
+            worksheet.Cells[3, 8] = "Giá Nhập";
+            worksheet.Cells[3, 9] = "Số Lượng Tồn Kho";
+
+
+
+            List<HangHoaDT0> h = new List<HangHoaDT0>();
+            h = hh.listloadhtheokho();
+
+            for (int i = 0; i < h.Count; i++)
+            {
+                worksheet.Cells[i + 4, 1] = i + 1;
+                worksheet.Cells[i + 4, 2] = h[i].mahh;
+                worksheet.Cells[i + 4, 3] = h[i].tenhh;
+                worksheet.Cells[i + 4, 4] = h[i].donvitinh;
+                worksheet.Cells[i + 4, 5] = h[i].duongdan;
+                worksheet.Cells[i + 4, 6] = h[i].giabanle;
+                worksheet.Cells[i + 4, 7] = h[i].giabansi;
+                worksheet.Cells[i + 4, 8] = h[i].gianhap;
+                worksheet.Cells[i + 4, 9] = h[i].soluong;
+
+
+
+
+            }
+            // định dạng trang
+            worksheet.PageSetup.Orientation = Excel.XlPageOrientation.xlPortrait;
+            worksheet.PageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+            worksheet.PageSetup.LeftMargin = 0;
+            worksheet.PageSetup.RightMargin = 0;
+            worksheet.PageSetup.BottomMargin = 0;
+            worksheet.PageSetup.TopMargin = 0;
+
+            //định dạng cột
+
+            worksheet.Range["A1", "G100"].Font.Name = "Times New Roman";
+            worksheet.Range["A1", "I100"].Font.Size = 14;
+            worksheet.Range["A1", "I1"].MergeCells = true;
+            worksheet.Range["A1", "I3"].Font.Bold = true;
+
+            // kẻ bảng
+            worksheet.Range["A3", "I" + (h.Count + 3)].Borders.LineStyle = 1;
+
+
+            // định dạng các dòng
+            worksheet.Range["A1", "G1"].HorizontalAlignment = 3;
+            worksheet.Range["A3", "I3"].HorizontalAlignment = 3;
+            worksheet.Range["A4", "I4" + h.Count.ToString()].HorizontalAlignment = 3;
+
+            worksheet.Columns.AutoFit();
         }
 
         private void btnThem_Click(object sender, EventArgs e)

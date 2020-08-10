@@ -28,10 +28,12 @@ namespace QuanLyVatLieuXayDung
     {
 
         AddTab add = new AddTab();
-        public s()
+        string macv;
+        public s(string macv)
         {
             InitializeComponent();
             skins();
+            this.macv = macv;
          
        
            
@@ -81,7 +83,47 @@ namespace QuanLyVatLieuXayDung
         private void s_Load(object sender, EventArgs e)
         {
             Login frm = new Login();
-            btntendangnhap.Caption = "Chào " ;
+            btntendangnhap.Caption = "Chào" +Login.tennv ;
+
+            btnNhanVien.Enabled = false;
+            BtnLoaiHang.Enabled = false;
+            btnXuatHang.Enabled = false;
+            btnThongTinTaiKhoan.Enabled = false;
+            btnPhieuChi.Enabled = false;
+            btnPhieuThu.Enabled = false;
+            btnNhaCungCap.Enabled = false;
+            btnHangHoa.Enabled = false;
+            btnKho2.Enabled = false;
+            btnDuyetDonHang.Enabled = false;
+            btnDskhachang.Enabled = false;
+            btnNhapHang.Enabled = false;
+            btnBanHang.Enabled = false;
+            if (macv == "CV001")
+            {
+             
+                btnNhaCungCap.Enabled = true;
+                BtnLoaiHang.Enabled = true;
+                btnHangHoa.Enabled = true;
+                btnKho2.Enabled = true;
+                btnPhieuChi.Enabled = true;
+                btnPhieuThu.Enabled = true;
+                
+       
+                
+            }
+            if(macv== "CV002")
+            {
+                btnDskhachang.Enabled = true;
+                btnBanHang.Enabled = true;
+                btnDuyetDonHang.Enabled = true;
+                btnNhapHang.Enabled = true;
+                btnKho2.Enabled = true;
+            }
+            if(macv=="CV003")
+            {
+                btnNhanVien.Enabled = true;
+                btnThongTinTaiKhoan.Enabled = true;
+            }
           
            
            
@@ -395,7 +437,7 @@ namespace QuanLyVatLieuXayDung
             }
             else
             {
-                add.AddTabControl(xtraTabControl1, "", "Kho", new GUI.Kho());
+                add.AddTabControl(xtraTabControl1, "", "Kho", new Kho1());
             }
 
         }

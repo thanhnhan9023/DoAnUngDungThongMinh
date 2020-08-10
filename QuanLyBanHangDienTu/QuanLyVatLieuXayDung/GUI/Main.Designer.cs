@@ -57,13 +57,15 @@
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnNhapHang = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnKho = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBanHang = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnKho2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDuyetDonHang = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPhieuThu = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnPhieuChi = new DevExpress.XtraBars.BarButtonItem();
             this.btnXuatHang = new DevExpress.XtraBars.BarButtonItem();
             this.BtnDachSachKH = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -103,8 +105,6 @@
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
@@ -367,26 +367,26 @@
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.btnKho);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnBanHang);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             // 
-            // btnKho
+            // btnBanHang
             // 
-            this.btnKho.Caption = "Xuất Hàng";
-            this.btnKho.Id = 28;
-            this.btnKho.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.sale_assistant;
-            this.btnKho.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKho.ItemAppearance.Disabled.Options.UseFont = true;
-            this.btnKho.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKho.ItemAppearance.Hovered.Options.UseFont = true;
-            this.btnKho.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKho.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnKho.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKho.ItemAppearance.Pressed.Options.UseFont = true;
-            this.btnKho.LargeWidth = 87;
-            this.btnKho.Name = "btnKho";
-            this.btnKho.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKho_ItemClick);
+            this.btnBanHang.Caption = "Xuất Hàng";
+            this.btnBanHang.Id = 28;
+            this.btnBanHang.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.sale_assistant;
+            this.btnBanHang.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBanHang.ItemAppearance.Disabled.Options.UseFont = true;
+            this.btnBanHang.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBanHang.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnBanHang.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBanHang.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnBanHang.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBanHang.ItemAppearance.Pressed.Options.UseFont = true;
+            this.btnBanHang.LargeWidth = 87;
+            this.btnBanHang.Name = "btnBanHang";
+            this.btnBanHang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnBanHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKho_ItemClick);
             // 
             // ribbonPageGroup13
             // 
@@ -413,29 +413,44 @@
             // 
             // ribbonPageGroup15
             // 
-            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup15.ItemLinks.Add(this.btnDuyetDonHang);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             this.ribbonPageGroup15.Text = "ribbonPageGroup15";
             // 
-            // barButtonItem8
+            // btnDuyetDonHang
             // 
-            this.barButtonItem8.Caption = "Duyệt Đơn Hàng";
-            this.barButtonItem8.Id = 36;
-            this.barButtonItem8.Name = "barButtonItem8";
-            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
+            this.btnDuyetDonHang.Caption = "Duyệt Đơn Hàng";
+            this.btnDuyetDonHang.Id = 36;
+            this.btnDuyetDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
+            this.btnDuyetDonHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
+            this.btnDuyetDonHang.Name = "btnDuyetDonHang";
+            this.btnDuyetDonHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // ribbonPageGroup16
             // 
-            this.ribbonPageGroup16.ItemLinks.Add(this.barButtonItem14);
+            this.ribbonPageGroup16.ItemLinks.Add(this.btnPhieuThu);
             this.ribbonPageGroup16.Name = "ribbonPageGroup16";
             this.ribbonPageGroup16.Text = "ribbonPageGroup16";
             // 
-            // barButtonItem14
+            // btnPhieuThu
             // 
-            this.barButtonItem14.Caption = "Phiếu Thu";
-            this.barButtonItem14.Id = 37;
-            this.barButtonItem14.Name = "barButtonItem14";
-            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
+            this.btnPhieuThu.Caption = "Phiếu Thu";
+            this.btnPhieuThu.Id = 37;
+            this.btnPhieuThu.Name = "btnPhieuThu";
+            this.btnPhieuThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
+            // 
+            // ribbonPageGroup17
+            // 
+            this.ribbonPageGroup17.ItemLinks.Add(this.btnPhieuChi);
+            this.ribbonPageGroup17.Name = "ribbonPageGroup17";
+            this.ribbonPageGroup17.Text = "ribbonPageGroup17";
+            // 
+            // btnPhieuChi
+            // 
+            this.btnPhieuChi.Caption = "Phiếu Chi";
+            this.btnPhieuChi.Id = 39;
+            this.btnPhieuChi.Name = "btnPhieuChi";
+            this.btnPhieuChi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
             // 
             // btnXuatHang
             // 
@@ -723,7 +738,7 @@
             this.barButtonItem17,
             this.barButtonItem18,
             this.btnXuatHang,
-            this.btnKho,
+            this.btnBanHang,
             this.skinRibbonGalleryBarItem3,
             this.skinDropDownButtonItem1,
             this.skinRibbonGalleryBarItem4,
@@ -731,10 +746,10 @@
             this.btnDskhachang,
             this.btnKho2,
             this.barButtonItem6,
-            this.barButtonItem8,
-            this.barButtonItem14,
+            this.btnDuyetDonHang,
+            this.btnPhieuThu,
             this.barButtonItem15,
-            this.barButtonItem16});
+            this.btnPhieuChi});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 40;
@@ -811,19 +826,6 @@
             this.xtraTabControl1.TabIndex = 9;
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick_1);
             // 
-            // ribbonPageGroup17
-            // 
-            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem16);
-            this.ribbonPageGroup17.Name = "ribbonPageGroup17";
-            this.ribbonPageGroup17.Text = "ribbonPageGroup17";
-            // 
-            // barButtonItem16
-            // 
-            this.barButtonItem16.Caption = "Phiếu Chi";
-            this.barButtonItem16.Id = 39;
-            this.barButtonItem16.Name = "barButtonItem16";
-            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
-            // 
             // s
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -895,7 +897,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.BarButtonItem btnXuatHang;
-        private DevExpress.XtraBars.BarButtonItem btnKho;
+        private DevExpress.XtraBars.BarButtonItem btnBanHang;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem3;
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
@@ -917,12 +919,12 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem7;
         private DevExpress.XtraNavBar.NavBarItem navBarItem8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem btnDuyetDonHang;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
+        private DevExpress.XtraBars.BarButtonItem btnPhieuThu;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem16;
+        private DevExpress.XtraBars.BarButtonItem btnPhieuChi;
     }
 }
 

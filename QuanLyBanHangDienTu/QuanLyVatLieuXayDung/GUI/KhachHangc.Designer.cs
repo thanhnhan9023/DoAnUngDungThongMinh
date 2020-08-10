@@ -89,6 +89,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -300,6 +301,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.simpleButton2);
             this.groupControl1.Controls.Add(this.btnSua);
             this.groupControl1.Controls.Add(this.btnXoa);
             this.groupControl1.Controls.Add(this.btnThem);
@@ -314,7 +316,7 @@
             this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.saveall_32x32;
-            this.btnSua.Location = new System.Drawing.Point(43, 214);
+            this.btnSua.Location = new System.Drawing.Point(43, 154);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(94, 43);
             this.btnSua.TabIndex = 1;
@@ -326,7 +328,7 @@
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.del32;
-            this.btnXoa.Location = new System.Drawing.Point(43, 137);
+            this.btnXoa.Location = new System.Drawing.Point(43, 94);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(94, 47);
             this.btnXoa.TabIndex = 1;
@@ -338,7 +340,7 @@
             this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.add32;
-            this.btnThem.Location = new System.Drawing.Point(43, 57);
+            this.btnThem.Location = new System.Drawing.Point(43, 31);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(94, 41);
             this.btnThem.TabIndex = 0;
@@ -786,6 +788,18 @@
             this.dataLayoutControl1.TabIndex = 1;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.close_32x32;
+            this.simpleButton2.Location = new System.Drawing.Point(43, 223);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(99, 45);
+            this.simpleButton2.TabIndex = 2;
+            this.simpleButton2.Text = "Hủy Bỏ";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
             // KhachHangc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -908,5 +922,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

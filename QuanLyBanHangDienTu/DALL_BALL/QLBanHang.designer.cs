@@ -22,7 +22,7 @@ namespace DALL_BALL
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyBanhangdientu")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyBanhangdientu2")]
 	public partial class QLBanHangDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -99,7 +99,7 @@ namespace DALL_BALL
     #endregion
 		
 		public QLBanHangDataContext() : 
-				base(global::DALL_BALL.Properties.Settings.Default.QuanLyBanhangdientuConnectionString, mappingSource)
+				base(global::DALL_BALL.Properties.Settings.Default.QuanLyBanhangdientu2ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1819,13 +1819,11 @@ namespace DALL_BALL
 		
 		private string _MoTa;
 		
-		private System.Nullable<double> _Giabanle;
+		private double _Giabanle;
 		
 		private System.Nullable<double> _Giabansi;
 		
 		private System.Nullable<double> _Gianhap;
-		
-		private System.Nullable<int> _SoLuongtonkho;
 		
 		private string _MaLoai;
 		
@@ -1853,14 +1851,12 @@ namespace DALL_BALL
     partial void OnDuongdanChanged();
     partial void OnMoTaChanging(string value);
     partial void OnMoTaChanged();
-    partial void OnGiabanleChanging(System.Nullable<double> value);
+    partial void OnGiabanleChanging(double value);
     partial void OnGiabanleChanged();
     partial void OnGiabansiChanging(System.Nullable<double> value);
     partial void OnGiabansiChanged();
     partial void OnGianhapChanging(System.Nullable<double> value);
     partial void OnGianhapChanged();
-    partial void OnSoLuongtonkhoChanging(System.Nullable<int> value);
-    partial void OnSoLuongtonkhoChanged();
     partial void OnMaLoaiChanging(string value);
     partial void OnMaLoaiChanged();
     #endregion
@@ -1975,8 +1971,8 @@ namespace DALL_BALL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Giabanle", DbType="Float")]
-		public System.Nullable<double> Giabanle
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Giabanle", DbType="Float NOT NULL")]
+		public double Giabanle
 		{
 			get
 			{
@@ -2031,26 +2027,6 @@ namespace DALL_BALL
 					this._Gianhap = value;
 					this.SendPropertyChanged("Gianhap");
 					this.OnGianhapChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuongtonkho", DbType="Int")]
-		public System.Nullable<int> SoLuongtonkho
-		{
-			get
-			{
-				return this._SoLuongtonkho;
-			}
-			set
-			{
-				if ((this._SoLuongtonkho != value))
-				{
-					this.OnSoLuongtonkhoChanging(value);
-					this.SendPropertyChanging();
-					this._SoLuongtonkho = value;
-					this.SendPropertyChanged("SoLuongtonkho");
-					this.OnSoLuongtonkhoChanged();
 				}
 			}
 		}

@@ -59,13 +59,6 @@
             this.txtMaNV = new DevExpress.XtraEditors.TextEdit();
             this.dsNhanVien = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -75,6 +68,13 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ckTrangthai.Properties)).BeginInit();
@@ -151,10 +151,11 @@
             // 
             // ckTrangthai
             // 
-            this.ckTrangthai.Location = new System.Drawing.Point(715, 192);
+            this.ckTrangthai.Location = new System.Drawing.Point(722, 192);
             this.ckTrangthai.Name = "ckTrangthai";
+            this.ckTrangthai.Properties.AutoWidth = true;
             this.ckTrangthai.Properties.Caption = "";
-            this.ckTrangthai.Size = new System.Drawing.Size(94, 19);
+            this.ckTrangthai.Size = new System.Drawing.Size(19, 19);
             this.ckTrangthai.TabIndex = 37;
             this.ckTrangthai.CheckedChanged += new System.EventHandler(this.ckTrangthai_CheckedChanged);
             // 
@@ -162,7 +163,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(619, 196);
+            this.labelControl8.Location = new System.Drawing.Point(619, 190);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(80, 21);
             this.labelControl8.TabIndex = 36;
@@ -474,86 +475,7 @@
             this.gridView1.GridControl = this.dsNhanVien;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.simpleButton1);
-            this.groupControl2.Controls.Add(this.btnXoa);
-            this.groupControl2.Controls.Add(this.btnSua);
-            this.groupControl2.Controls.Add(this.btnThem);
-            this.groupControl2.Location = new System.Drawing.Point(33, 6);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(200, 298);
-            this.groupControl2.TabIndex = 5;
-            this.groupControl2.Text = "Chức năng";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(27, 251);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(147, 29);
-            this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "Thêm Chức Vụ";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.del32;
-            this.btnXoa.Location = new System.Drawing.Point(27, 172);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(147, 44);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Appearance.Options.UseFont = true;
-            this.btnSua.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.update32;
-            this.btnSua.Location = new System.Drawing.Point(27, 111);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(147, 44);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "Sửa\r\n";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.add32;
-            this.btnThem.Location = new System.Drawing.Point(27, 49);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(147, 44);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.groupControl2);
-            this.panelControl1.Controls.Add(this.groupControl1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1148, 331);
-            this.panelControl1.TabIndex = 6;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.dsNhanVien);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 331);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1148, 456);
-            this.panelControl2.TabIndex = 7;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // gridColumn1
             // 
@@ -645,6 +567,86 @@
             this.gridColumn9.VisibleIndex = 8;
             this.gridColumn9.Width = 94;
             // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.simpleButton1);
+            this.groupControl2.Controls.Add(this.btnXoa);
+            this.groupControl2.Controls.Add(this.btnSua);
+            this.groupControl2.Controls.Add(this.btnThem);
+            this.groupControl2.Location = new System.Drawing.Point(33, 6);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(200, 298);
+            this.groupControl2.TabIndex = 5;
+            this.groupControl2.Text = "Chức năng";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(27, 251);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(147, 29);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "Thêm Chức Vụ";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Appearance.Options.UseFont = true;
+            this.btnXoa.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.del32;
+            this.btnXoa.Location = new System.Drawing.Point(27, 172);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(147, 44);
+            this.btnXoa.TabIndex = 2;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Appearance.Options.UseFont = true;
+            this.btnSua.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.update32;
+            this.btnSua.Location = new System.Drawing.Point(27, 111);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(147, 44);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "Sửa\r\n";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Appearance.Options.UseFont = true;
+            this.btnThem.ImageOptions.Image = global::QuanLyVatLieuXayDung.Properties.Resources.add32;
+            this.btnThem.Location = new System.Drawing.Point(27, 49);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(147, 44);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.groupControl2);
+            this.panelControl1.Controls.Add(this.groupControl1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1148, 331);
+            this.panelControl1.TabIndex = 6;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.dsNhanVien);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 331);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(1148, 456);
+            this.panelControl2.TabIndex = 7;
+            // 
             // cnNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -706,10 +708,8 @@
         private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.ComboBox cboGioiTinh;
-        private DevExpress.XtraEditors.CheckEdit ckTrangthai;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.ComboBox cboChuVu;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.DateEdit dateNgaySinh;
         private DevExpress.XtraEditors.LabelControl labelControl5;
@@ -729,5 +729,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraEditors.CheckEdit ckTrangthai;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
     }
 }

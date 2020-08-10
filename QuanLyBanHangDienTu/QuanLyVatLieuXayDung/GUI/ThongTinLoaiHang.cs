@@ -13,7 +13,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using System.Net;
 using System.IO;
 using System.IO.Compression;
-
+using Excel = Microsoft.Office.Interop.Excel;
 namespace QuanLyVatLieuXayDung.GUI
 {
     public partial class ThongTinLoaiHang : DevExpress.XtraEditors.XtraUserControl
@@ -303,6 +303,69 @@ namespace QuanLyVatLieuXayDung.GUI
         private void labelControl1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Excel.Application application = new Excel.Application();
+            Excel.Workbook workbook;
+            Excel.Worksheet worksheet;
+
+
+
+
+
+            workbook = application.Workbooks.Add(Type.Missing);
+            application.Visible = true;
+            application.WindowState = Excel.XlWindowState.xlMaximized;
+            //getdatabase   
+            workbook.Worksheets.Add();
+            worksheet = workbook.Sheets[1];
+
+
+            worksheet.Cells[1, 1] = "Thông Tin Loại Hàng";
+            worksheet.Cells[3, 1] = "STT";
+            worksheet.Cells[3, 2] = "Mã Loại";
+            worksheet.Cells[3, 3] = "Tên Loại";
+            worksheet.Cells[3, 4] = "Mô Tả";
+            worksheet.Cells[3, 5] = "Link Hình ảnh";
+
+            List<LoaiHang> lh = new List<LoaiHang>();
+            lh = lhl.loaddulieuloaihang();
+
+            for (int i = 0; i < lh.Count; i++)
+            {
+                worksheet.Cells[i + 4, 1] = i + 1;
+                worksheet.Cells[i + 4, 2] = lh[i].MaLoai;
+                worksheet.Cells[i + 4, 3] = lh[i].TenLoai;
+                worksheet.Cells[i + 4, 4] = lh[i].Mota;
+                worksheet.Cells[i + 4, 5] = lh[i].Linkloaihang;
+            }
+            // định dạng trang
+            worksheet.PageSetup.Orientation = Excel.XlPageOrientation.xlPortrait;
+            worksheet.PageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+            worksheet.PageSetup.LeftMargin = 0;
+            worksheet.PageSetup.RightMargin = 0;
+            worksheet.PageSetup.BottomMargin = 0;
+            worksheet.PageSetup.TopMargin = 0;
+
+            //định dạng cột
+
+            worksheet.Range["A1", "G100"].Font.Name = "Times New Roman";
+            worksheet.Range["A1", "I100"].Font.Size = 14;
+            worksheet.Range["A1", "I1"].MergeCells = true;
+            worksheet.Range["A1", "I3"].Font.Bold = true;
+
+            // kẻ bảng
+            worksheet.Range["A3", "E" + (lh.Count + 3)].Borders.LineStyle = 1;
+
+
+            // định dạng các dòng
+            worksheet.Range["A1", "G1"].HorizontalAlignment = 3;
+            worksheet.Range["A3", "I3"].HorizontalAlignment = 3;
+            worksheet.Range["A4", "I4" + lh.Count.ToString()].HorizontalAlignment = 3;
+
+            worksheet.Columns.AutoFit();
         }
 
         private void ckTranThai_CheckedChanged(object sender, EventArgs e)

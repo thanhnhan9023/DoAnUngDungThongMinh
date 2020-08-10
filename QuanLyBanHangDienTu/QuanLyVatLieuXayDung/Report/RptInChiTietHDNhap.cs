@@ -9,15 +9,15 @@ namespace QuanLyVatLieuXayDung.Report
 {
     public partial class RptInChiTietHDNhap : DevExpress.XtraReports.UI.XtraReport
     {
-        public RptInChiTietHDNhap( )
+        public RptInChiTietHDNhap(string ngay,string nam,string thang)
         {
             InitializeComponent();
-           
-            //lblNgayNhap.Text = ngaylap;
-            //lblhoadon.Text = mahd;
-            //lblTenNhaCc.Text = tenncc;
 
-           
+            lblNgay.Text = ngay;
+            lblThang.Text = thang;
+            lblNam.Text = nam;
+
+
         }
 
     }

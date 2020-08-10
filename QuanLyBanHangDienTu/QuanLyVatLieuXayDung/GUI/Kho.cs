@@ -12,13 +12,13 @@ using DALL_BALL;
 
 namespace QuanLyVatLieuXayDung.GUI
 {
-    public partial class Kho : DevExpress.XtraEditors.XtraUserControl
+    public partial class Kho1 : DevExpress.XtraEditors.XtraUserControl
     {
         DALL_BALl_Khocs kho = new DALL_BALl_Khocs();
         DALL_BALL_Loaihang lh = new DALL_BALL_Loaihang();
 
         string makho="";
-        public Kho()
+        public Kho1()
         {
             InitializeComponent();
         }

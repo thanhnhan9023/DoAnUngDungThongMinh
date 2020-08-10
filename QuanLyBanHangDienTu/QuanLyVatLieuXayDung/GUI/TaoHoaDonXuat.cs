@@ -48,12 +48,29 @@ namespace QuanLyVatLieuXayDung.GUI
             txtNgaySinh.DateTime = DateTime.Now;
             txtTenNv.Text = Login.tennv;
             txtTenNv.Enabled = false;
+            seteditValuebyindex();
             databinds();
-         
-       
+            btnLuu.Enabled = false;
 
-         
-          
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+            txtMaHDXuat.Enabled = false;
+            
+
+            gridView1.OptionsView.ColumnAutoWidth = false;
+            gridView1.OptionsView.BestFitMaxRowCount = -1;
+            gridView1.BestFitColumns();
+
+            MenuLuuPhieunhap.Enabled = false;
+            menuThemPhieuxuat.Enabled = true;
+            Menuxoaphieuxuat.Enabled = true;
+            
+
+
+
+
+
         }
        
 
@@ -66,7 +83,7 @@ namespace QuanLyVatLieuXayDung.GUI
 
         public void loadhoadon()
         {
-            dshoadonhap.DataSource = hdxuat.loadataHoaDonXuat();
+            dshoadonhap.DataSource = hdxuat.loadataHoaDonXuat(Login.manv);
 
 
         
@@ -75,7 +92,7 @@ namespace QuanLyVatLieuXayDung.GUI
         public void loadhanghoa()
         {
 
-            cboHangHoa.Properties.DataSource = hh.loadhanghoa();
+            cboHangHoa.Properties.DataSource = hh.loadkho();
             cboHangHoa.Properties.DisplayMember = "TenHH";
             cboHangHoa.Properties.ValueMember = "MaHH";
 
@@ -86,6 +103,13 @@ namespace QuanLyVatLieuXayDung.GUI
         {
 
          dsChitietHd.DataSource= hdxuat.loadchitiethoadonxuat(mahdxuat);
+            if(gridView2.RowCount<=0)
+            {
+
+                txtSoLuong.Text = "";
+                txtGiaNhap.Text = "";
+
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -125,7 +149,9 @@ namespace QuanLyVatLieuXayDung.GUI
                 txtMaHDXuat.Text = hdxuat.getmaHoadonxuat();
             }
             txtNgaySinh.EditValue = DateTime.Now;
-                
+            Menuxoaphieuxuat.Enabled = false;
+            MenuLuuPhieunhap.Enabled = true;
+            
 
             add = true;
             update = false;
@@ -162,8 +188,10 @@ namespace QuanLyVatLieuXayDung.GUI
         }
         public void databinds()
         {
-            txtTongtien.DataBindings.Clear();
-            txtTongtien.DataBindings.Add("Text",dshoadonhap.DataSource,"TongTien");
+
+           
+            
+
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -173,10 +201,14 @@ namespace QuanLyVatLieuXayDung.GUI
             {
                 txtMaHDXuat.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MAHD_Xuat").ToString();
                 txtNgaySinh.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NgayLap_Xuat");
-                loaddulieuhoadonxuat(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MAHD_Xuat").ToString());
+                loaddulieuhoadonxuat(txtMaHDXuat.Text);
                
                 tinhtrang2= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TinhTrangXuat").ToString();
-
+                if(tinhtrang2=="Đang giao dịch")
+                {
+                    txtTongtien.DataBindings.Clear();
+                    txtTongtien.DataBindings.Add("Text",dshoadonhap.DataSource,"TongTien");
+                }
                 
                 
 
@@ -232,7 +264,7 @@ namespace QuanLyVatLieuXayDung.GUI
                 {
 
                     hdxuat.them1HoaDonXuat(mahdxuat, makh, manv, ngaylap, tinhtrang,0);
-                    load_hoadonxuat(sender,e);
+                    load_hoadonxuat(sender, e);
                     XtraMessageBox.Show("Thành công");
                 }
 
@@ -242,11 +274,33 @@ namespace QuanLyVatLieuXayDung.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             add2 = true;
-           
+            update2 = false;
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            btnSua.Enabled = false;
+
+            if (txtSoLuong.Text.Length <= 0)
+            {
+                XtraMessageBox.Show("Bạn chưa nhập số lượng");
+                return;
+            }
+            if (txtGiaNhap.Text.Length <= 0)
+            {
+                XtraMessageBox.Show("Bạn chưa giá nhập");
+                return;
+            }
+            int soluong = int.Parse(txtSoLuong.Text);
+            int tonkho = int.Parse(txtSoLuongKho.Text);
+            if(soluong>tonkho)
+            {
+                XtraMessageBox.Show("Số lượng vượt số lượng kho");
+                return;
+            }
+            
                 Chitiethoadonxuattam ct = new Chitiethoadonxuattam();
                 ct.MAHD_Xuat = txtMaHDXuat.Text;
                 ct.MaHH = cboHangHoa.EditValue.ToString();
-                ct.TenHH = tenhhtam;
+                 ct.TenHH = tenhhtam;
                 ct.DonGia_Xuat = double.Parse(txtGiaNhap.Text);
                 ct.SoLuong_Xuat = int.Parse(txtSoLuong.Text);
                 ct.ThanhTienXuat = long.Parse(txtThanhTien.Text);
@@ -269,6 +323,15 @@ namespace QuanLyVatLieuXayDung.GUI
                 }
                 if (s == 1)
                 {
+
+                int soluongkho = int.Parse(txtSoLuongKho.Text);
+
+                if(soluongkho==0)
+                {
+                    XtraMessageBox.Show("Hết hàng");
+                    return;
+                }
+
                     lsttam.Add(ct);
 
                     loadtam();
@@ -281,11 +344,29 @@ namespace QuanLyVatLieuXayDung.GUI
         {
             dsChitietHd.DataSource = "";
             dsChitietHd.DataSource = lsttam;
+            txtSoLuong.Text = "";
+            txtGiaNhap.Text = "";
         }
 
         private void cboHangHoa_EditValueChanged(object sender, EventArgs e)
         {
-            tenhhtam=gridView3.GetRowCellValue(gridView3.FocusedRowHandle,"TenHH").ToString();
+
+            if (gridView3.RowCount > 0)
+            {
+
+                List<Kho> lst = new List<Kho>();
+                lst = hh.loadsoluongtonkho(cboHangHoa.EditValue.ToString());
+                txtSoLuongKho.Text = lst[0].SoLuong.ToString();
+                txtGiaNhap.Text = hh.loadgiaban(cboHangHoa.EditValue.ToString());
+                object tenhhhienthi = gridView3.GetRowCellValue(gridView3.FocusedRowHandle, "TenHH").ToString();
+                if (tenhhhienthi == null)
+                {
+                    return;
+                }
+                tenhhtam = tenhhhienthi.ToString();
+                
+            }
+
            
         }
 
@@ -371,6 +452,10 @@ namespace QuanLyVatLieuXayDung.GUI
         {
             update2 = true;
             add2 = false;
+            btnLuu.Enabled = true;
+            btnXoa.Enabled = false;
+            btnThem.Enabled = false;
+          
         }
 
         private void btnXoaNhap_ListItemClick_1(object sender, DevExpress.XtraBars.ListItemClickEventArgs e)
@@ -417,6 +502,11 @@ namespace QuanLyVatLieuXayDung.GUI
                 tongtien = (long)(long.Parse(txtTongtien.Text) * (1 - 0.1));
                 txtTongtien.Text = tongtien.ToString();
             }
+        }
+
+        private void btnHuyBo_Click_1(object sender, EventArgs e)
+        {
+            load_hoadonxuat(sender, e);
         }
 
         private void txtKhachDua_EditValueChanged(object sender, EventArgs e)
@@ -489,9 +579,8 @@ namespace QuanLyVatLieuXayDung.GUI
                     long thanhtienxuat = long.Parse(txtThanhTien.Text);
                     float vat = 0;
                     string donvi = txtDonVi.Text;
-                    hdxuat.sua1chitiethoadonxuat(mahh,soluong,thanhtienxuat,vat,giaxuat,donvi);
-                    loaddulieuhoadonxuat(txtMaHDXuat.Text);
-                    
+                    hdxuat.sua1chitiethoadonxuat(txtMaHDXuat.Text,mahh, soluong, thanhtienxuat, giaxuat);
+                    loaddulieuhoadonxuat(txtMaHDXuat.Text);                
                     XtraMessageBox.Show("Thành công");
                 }
             }
@@ -504,10 +593,15 @@ namespace QuanLyVatLieuXayDung.GUI
             
         }
 
-        public void selectfistTenhanghoa()
-        {
-          
-        }
+       
+            public void seteditValuebyindex()
+            {
+                var ds = cboHangHoa.Properties.GetKeyValue(0);
+                cboHangHoa.EditValue = ds;
+                var ds2 = cboKhachHang.Properties.GetKeyValue(0);
+                cboKhachHang.EditValue = ds2;
+            }
+        
     
 
      

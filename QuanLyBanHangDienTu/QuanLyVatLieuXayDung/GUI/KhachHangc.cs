@@ -378,8 +378,7 @@ namespace QuanLyVatLieuXayDung.GUI
             //string a = list[0].tongtien.ToString();
             List<String> lsttongtientt = new List<string>();
             List<String> lsttongtienno = new List<String>();
-            List<CellExcel> listcell = new List<CellExcel>();
-            List<CellExcel> listcell2 = new List<CellExcel>();
+           
 
             for (int i = 0; i < lst2.Count; i++)
             {
@@ -405,7 +404,7 @@ namespace QuanLyVatLieuXayDung.GUI
                     worksheet.Cells[i + 4, 8] = lsttongtientt[i].ToString();
                     cell.dong = i + 4;
                     cell.cot = 8;
-                    listcell.Add(cell);
+                  
                 }
                 else
                 {
@@ -418,7 +417,7 @@ namespace QuanLyVatLieuXayDung.GUI
                     worksheet.Cells[i + 4, 9] = lsttongtienno[i].ToString();
                     cell.dong = i + 4;
                     cell.cot = 9;
-                    listcell2.Add(cell);
+                 
                 }
                 else
                 {
@@ -445,15 +444,7 @@ namespace QuanLyVatLieuXayDung.GUI
 
             // kẻ bảng nhân viên
             worksheet.Range["A3", "I" + (lst2.Count + 3)].Borders.LineStyle = 1;
-            //for (int i = 0; i < listcell.Count; i++)
-            //{
-            //    worksheet.Range["H" + listcell[i].dong.ToString(), "H" + listcell
-            //}
-
-            //for (int i = 0; i < listcell2.Count; i++)
-            //{
-            //    worksheet.Range["I" + listcell2[i].dong.ToString(), "I" + listcell2
-            //}
+        
 
 
             // định dạng các dòng
@@ -484,6 +475,11 @@ namespace QuanLyVatLieuXayDung.GUI
         private void btnThemKhachHang_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            KhachHangc_Load(sender, e);
         }
 
         public void loadcomboxmaloaikh()

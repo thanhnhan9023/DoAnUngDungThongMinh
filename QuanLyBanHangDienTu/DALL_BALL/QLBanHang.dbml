@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyBanhangdientu" Class="QLBanHangDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=QuanLyBanhangdientu;User ID=sa" SettingsObjectName="DALL_BALL.Properties.Settings" SettingsPropertyName="QuanLyBanhangdientuConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyBanhangdientu2" Class="QLBanHangDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-023KV5Q\MSSQLSEVER;Initial Catalog=QuanLyBanhangdientu2;User ID=sa" SettingsObjectName="DALL_BALL.Properties.Settings" SettingsPropertyName="QuanLyBanhangdientu2ConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Banner" Member="Banners">
     <Type Name="Banner">
       <Column Name="ID_banner" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -80,10 +80,9 @@
       <Column Name="DonViTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Duongdan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="MoTa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Giabanle" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Giabanle" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="Giabansi" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Gianhap" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoLuongtonkho" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaLoai" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
       <Association Name="HangHoa_Chitietdondathang" Member="Chitietdondathangs" ThisKey="MaHH" OtherKey="MAHH" Type="Chitietdondathang" />
       <Association Name="HangHoa_ChiTietHD_Nhap" Member="ChiTietHD_Nhaps" ThisKey="MaHH" OtherKey="MAHH" Type="ChiTietHD_Nhap" />

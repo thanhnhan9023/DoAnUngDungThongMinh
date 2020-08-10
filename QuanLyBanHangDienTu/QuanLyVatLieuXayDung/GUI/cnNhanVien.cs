@@ -20,7 +20,8 @@ namespace QuanLyVatLieuXayDung.GUI
         DALL_BALL_Hoadonxuat hdxuat = new DALL_BALL_Hoadonxuat();
         HoaDonNhapDALL_BALL hdnhap = new HoaDonNhapDALL_BALL();
         DALL_QuantriNguoiDung qtngd = new DALL_QuantriNguoiDung();
-        bool add = false, update = false, loai;
+        bool add = false, update = false ;
+        string tinhtrang = "";
         
 
 
@@ -79,10 +80,10 @@ namespace QuanLyVatLieuXayDung.GUI
         {
             if (ckTrangthai.Checked)
             {
-                loai = true;
+                tinhtrang = "Còn Làm";
             }
             else
-                loai = false;
+                tinhtrang = "Nghĩ Việc";
         }
         public void binds(bool t)
 
@@ -186,7 +187,7 @@ namespace QuanLyVatLieuXayDung.GUI
                     nm.them1NhanVien(txtMaNV.Text, txtHoTenNV.Text,
                         cboGioiTinh.Text, ns,
                         txtDiaChi.Text, txtSdt.Text, nvl,
-                        cboChuVu.SelectedValue.ToString(), "1");
+                        cboChuVu.SelectedValue.ToString(), "Còn Làm");
                     XtraMessageBox.Show("ngay sinh" + ns.Date);
                     cnNhanVien_Load(sender, e);
 
@@ -200,7 +201,7 @@ namespace QuanLyVatLieuXayDung.GUI
 
                     nm.sua1NhanVien(txtMaNV.Text, txtHoTenNV.Text,
                         cboGioiTinh.Text, ns,
-                        txtDiaChi.Text, txtSdt.Text, nvl, cboChuVu.SelectedValue.ToString(), "0");
+                        txtDiaChi.Text, txtSdt.Text, nvl, cboChuVu.SelectedValue.ToString(), tinhtrang);
                     XtraMessageBox.Show("Thành công");
                     cnNhanVien_Load(sender, e);
 
@@ -367,8 +368,7 @@ namespace QuanLyVatLieuXayDung.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             resetValues();
-            hienthi(false);
-            loai = true;
+            hienthi(false);    
             add = true;
             update = false;
             binds(false);
@@ -383,6 +383,21 @@ namespace QuanLyVatLieuXayDung.GUI
             txtMaNV.Text = nm.getmaNhanVien(txtMaNV.Text);
 
         }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if(gridView1.RowCount>0)
+            {
+                string s = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TinhTrang").ToString();
+                if (s == "Còn Làm")
+                {
+                    ckTrangthai.Checked = true;
+                }
+                else
+                    ckTrangthai.Checked = false;
+            }
+        }
+
         private void cnNhanVien_Load(object sender, EventArgs e)
         {
             //Load DataGrid

@@ -27,15 +27,22 @@ namespace DALL_BALL
         }
        public void themphieuthikhithanhtoan(string maphieuthu,string doituong,string trangthai,string manv,long sotienthu,DateTime ngayghinhan)
         {
-            PhieuThu pt = new PhieuThu();
-            pt.MaPhieuThu = maphieuthu;
-            pt.DoiTuong = doituong;
-            pt.TrangThai = trangthai;
-            pt.MaNV = manv;
-            pt.Sotienchi = sotienthu;
-            pt.Ngayghinhan = ngayghinhan;
-            data.PhieuThus.InsertOnSubmit(pt);
-            data.SubmitChanges();
+
+            using (QLBanHangDataContext data = new QLBanHangDataContext())
+            {
+                PhieuThu pt = new PhieuThu();
+                pt.MaPhieuThu = maphieuthu;
+                pt.DoiTuong = doituong;
+                pt.TrangThai = trangthai;
+                pt.MaNV = manv;
+                pt.Sotienchi = sotienthu;
+                pt.Ngayghinhan = ngayghinhan;
+                data.PhieuThus.InsertOnSubmit(pt);
+                data.SubmitChanges();
+            }
+
+
+          
         }
 
     }

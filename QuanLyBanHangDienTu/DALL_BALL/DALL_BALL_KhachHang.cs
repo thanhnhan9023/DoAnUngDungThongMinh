@@ -164,7 +164,7 @@ namespace DALL_BALL
               (from HoaDon_Xuats in db.HoaDon_Xuats
                where
                 HoaDon_Xuats.MAKH == makh &&
-                HoaDon_Xuats.TinhTrangXuat == "Đã Thanh Toán"
+                HoaDon_Xuats.TinhTrangXuat == "Đã  Thanh Toán"
                select new
                {
                    HoaDon_Xuats.TongTien,
